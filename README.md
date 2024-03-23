@@ -3,7 +3,7 @@ Hey guys i build this yt views increaser bot with the help of simple page refres
 
 BEFORE
 BEFORE
-(https://github.com/Anatan66/youtube-bot/assets/156326535/6141cba1-0224-4f8d-bf29-81c784caf2b8)
+![BEFORE](https://github.com/Anatan66/youtube-bot/assets/156326535/6141cba1-0224-4f8d-bf29-81c784caf2b8)
 
 
 
