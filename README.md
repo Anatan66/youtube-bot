@@ -2,8 +2,9 @@ Youtube-view-increase-bot
 Hey guys i build this yt views increaser bot with the help of simple page refreshing logic
 
 BEFORE
-BEFORE
-![Uploading scam.png…]()
+BEFORE(https://github.com/Anatan66/youtube-bot/assets/156326535/6141cba1-0224-4f8d-bf29-81c784caf2b8)
+
+
 
 AFTER
 AFTER
