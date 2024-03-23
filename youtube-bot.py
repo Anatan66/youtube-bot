@@ -1,21 +1,75 @@
+import webbrowser
+import time
+
+# odkaz na vaše video
+video_link = "https://www.youtube.com/watch?v=8cLSJadaxlo&t=14s"
+
+# otevření video v prohlížeči
+webbrowser.open(video_link)
+
+import webbrowser
+import time
+
+# odkaz na vaše video
+video_link = "https://www.youtube.com/watch?v=kvYn7CaTxNk&t=8s"
+
+# otevření video v prohlížeči
+webbrowser.open(video_link)
+
+import webbrowser
+import time
+
+# odkaz na vaše video
+video_link = "https://youtu.be/HnAWsUWG6L8"
+
+# otevření video v prohlížeči
+webbrowser.open(video_link)
+
+# otevření video v prohlížeči
+webbrowser.open(video_link)
+
+# otevření video v prohlížeči
+webbrowser.open(video_link)
+
+# sledování videa po dobu 60 sekund
+time.sleep(600)
+
+from googleapiclient.discovery import build
+from google_auth_oauthlib.flow import InstalledAppFlow
+
+API_SERVICE_NAME = 'youtube'
+API_VERSION = 'v3'
+CLIENT_SECRETS_FILE = 'client_secret.json'
+
+SCOPES = ['https://www.googleapis.com/auth/youtube.force-ssl']
+
+def main():
+    flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRETS_FILE, SCOPES)
+    credentials = flow.run_console()
+
+    youtube = build(API_SERVICE_NAME, API_VERSION, credentials=credentials)
+
+    request = youtube.videos().rate(
+        id="HnAWsUWG6L8",
+        rating="like"
+    )
+    response = request.execute()
+
+    print("Video bylo úspěšně označeno jako líbivé.")
+
+if __name__ == '__main__':
+    main()
+
 from selenium import webdriver
-from time import sleep
+import time
 
-siddharth1= webdriver.Chrome(executable_path="C:\Users\siddh\Downloads\Compressed\chromedriver_win32\chromedriver")#In executable path give the path of chromedriver that you have downloaded. In my case it is in downloads.
-siddharth2= webdriver.Chrome(executable_path="C:\Users\siddh\Downloads\Compressed\chromedriver_win32\chromedriver")
-siddharth3= webdriver.Chrome(executable_path="C:\Users\siddh\Downloads\Compressed\chromedriver_win32\chromedriver")
+# otevřít webový prohlížeč
+driver = webdriver.Chrome()
+driver.get('http://www.example.com')
 
-siddharth1.get("https://www.youtube.com/watch?v=kvYn7CaTxNk")#provide the link
-siddharth2.get("https://www.youtube.com/watch?v=kvYn7CaTxNk")
-siddharth3.get("https://www.youtube.com/watch?v=kvYn7CaTxNk")
-#i have used siddharth 1,2,3  so it will open 3 tabs 
-#if you want to add more tabs you can also do it 
+# počkat 60 sekund a poté obnovit stránku
+time.sleep(600)
+driver.refresh()
 
-while True:
-    sleep(18)#sleep 18 meanes after 18 seconds page will refresh
-    siddharth1.refresh()
-    siddharth2.refresh()
-    siddharth3.refresh()
-    
-    #To execute - Simple run this code
-    #Happy coding - Siddharth
+# zavřít prohlížeč
+driver.quit()
